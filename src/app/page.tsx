@@ -9,15 +9,18 @@ import profile from '@/assets/linkwdinProfile.jpg';
 import React from 'react'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function page() {
   return (
     <div>
       {/*landing page*/}
-      <div className='w-screen h-screen flex items-center justify-center'>
+      <div className='w-screen h-screen flex items-center justify-center relative'>
+      <BackgroundBeams/>
+
         <div className='flex flex-col gap-2'>
 
-          <div className='font-bold text-6xl text-center text-white/90 ' >
+          <div className='font-bold text-6xl text-center text-white/90 tracking- ' >
           Hi, I'm Bhavesh
           </div>
 
@@ -30,10 +33,22 @@ function page() {
           </div>
 
           <div className='flex items-center justify-center gap-4 mx-auto'>
-            <FaInstagram className='w-4 h-4 text-red-500'/>
-            <FaXTwitter className='w-4 h-4 text-white '/>
-            <FaGithub className='w-4 h-4 text-white '/>
-            <FaLinkedin className='w-4 h-4 text-blue-500 '/>
+          <Link href={"/"}>
+            <FaInstagram className='w-4 h-4 text-red-500 cursor-pointer'/>
+          </Link>
+
+          <Link href={"/"}>
+            <FaXTwitter className='w-4 h-4 text-white cursor-pointer'/>
+          </Link>
+
+          <Link href={"/"}>
+            <FaGithub className='w-4 h-4 text-white cursor-pointer'/>
+          </Link>
+
+          <Link href={"/about"}>
+            <FaLinkedin className='w-4 h-4 text-blue-500 cursor-crosshair'/>
+          </Link>
+
           </div>
 
           <div className='flex w-full justify-center items-center gap-3 mt-4'>
@@ -56,7 +71,6 @@ function page() {
           </div>
         </div>
 
-        <BackgroundBeams/>
       </div>
 
       {/* about me*/}
