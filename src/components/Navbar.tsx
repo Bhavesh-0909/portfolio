@@ -1,16 +1,26 @@
 import Image from 'next/image'
 import React from 'react'
 import { MdDarkMode } from "react-icons/md";
+import logo from "../assets/bc.png";
+import Link from 'next/link';
 
 function Navbar() {
   return (
-    <div>
-        <div>
-            <Image src="../../public/next.svg" alt="logo" width={100} height={100} />
+    <div className='w-full py-4 flex justify-center space-x-40 items-center bg-black/50 fixed z-50'>
+        <div className='w-8 h-8 rounded-full object-cover overflow-hidden flex items-center justify-center'>
+          <Link href={'/'}>
+            <Image src={logo} alt="logo" width={110} height={110} />
+          </Link>
         </div>
-        <div></div>
+        <div className='flex justify-center items-center space-x-6'>
+          <div>About</div>
+          <div>Projects</div>
+          <div>Experience</div>
+          <div>Blogs</div>
+          <div>Contact</div>
+        </div>
         <div>
-            <MdDarkMode/>
+            <MdDarkMode width={100} height={100}/>
         </div>
     </div>
   )
