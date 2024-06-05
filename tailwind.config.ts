@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -15,6 +16,32 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
+
+function flattenColors(
+  colors: Record<string, any>,
+  prefix = ''
+): Record<string, string> {
+  return Object.entries(colors).reduce((acc, [key, value]) => {
+    if (typeof value === 'object') {
+      Object.assign(acc, flattenColors(value, `${prefix}${key}-`));
+    } else {
+      acc[`${prefix}${key}`] = value;
+    }
+    return acc;
+  }, {} as Record<string, string>);
+}
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColors(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
+
 export default config;
