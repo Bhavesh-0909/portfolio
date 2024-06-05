@@ -20,7 +20,7 @@ function Navbar() {
           <div>Contact</div>
         </div>
         <div>
-            <MdDarkMode width={100} height={100}/>
+            <MdDarkMode className='w-7 h-7' width={150} height={150}/>
         </div>
     </div>
   )

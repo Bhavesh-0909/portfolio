@@ -60,10 +60,10 @@ function page() {
       </div>
 
       {/* about me*/}
-      <div className='w-screen h-screen px-10 flex flex-col gap-4'>
+      <div className='w-screen h-[90vh] px-10 flex flex-col justify-center gap-4'>
         <div className='text-xs text-white/70 '>ABOUT ME</div>
-        <div className='flex flex-col md:flex-row items-center gap-10 md:gap-64 '>
-          <div className='text-sm text-white/90 font-bold md:w-1/2 flex-start'>
+        <div className='flex flex-col md:flex-row items-center gap-10 md:gap-32 '>
+          <div className='text-lg text-white/90 font-semibold md:w-3/5 flex-start'>
           Hi, I'm Bhavesh Choudhary, a third-year Computer Science Engineering student at 
           Lokmanya Tilak College of Engineering, Navi Mumbai. I have a deep passion 
           for software development and design, and I'm always eager to learn new technologies.<br/><br/>
