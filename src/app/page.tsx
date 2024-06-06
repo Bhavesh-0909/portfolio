@@ -6,10 +6,14 @@ import { FaLinkedin } from "react-icons/fa";
 import { IoIosArrowDropright } from "react-icons/io";
 import { IoMdDownload } from "react-icons/io";
 import profile from '@/assets/linkwdinProfile.jpg';
+
 import React from 'react'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from "next/dynamic"
+import Grid from '@/components/Grid';
+
 
 function page() {
   return (
@@ -92,7 +96,9 @@ function page() {
       </div>
 
       {/* cool grid */}
-      <div></div>
+      <div className='w-screen h-auto min-h-screen px-10 md:mt-20 mb-10'>
+        <Grid/>
+      </div>
 
       {/*Tech stack*/}
       <div></div>
