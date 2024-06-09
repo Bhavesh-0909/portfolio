@@ -11,7 +11,7 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 
 function AboutLanding() {
   return (
-    <div className='w-screen h-screen flex items-center justify-center relative'>
+    <div className='w-screen h-screen flex items-center justify-center relative mb-20 md:mb-0'>
     <BackgroundBeams/>
 
       <div className='flex flex-col gap-2'>
