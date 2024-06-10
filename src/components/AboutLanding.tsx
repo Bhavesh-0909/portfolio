@@ -17,7 +17,7 @@ function AboutLanding() {
       <div className='flex flex-col gap-2'>
 
         <div className='font-bold text-6xl text-center text-white/90 tracking- ' >
-        Hi, I'm Bhavesh
+        Hi, I&apos;m Bhavesh
         </div>
 
         <div className='font-bold -mt-3 text-lg text-center text-red-500/70 ' >

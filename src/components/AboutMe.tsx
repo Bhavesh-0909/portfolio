@@ -10,11 +10,11 @@ function AboutMe() {
           
           <div className='text-lg text-white/90 font-semibold md:w-3/5 flex-start'>
           <span className='text-xs text-white/70'>ABOUT ME <br/></span>
-          Hi, I'm Bhavesh Choudhary, a third-year Computer Science Engineering student at 
+          Hi, I&apos;m Bhavesh Choudhary, a third-year Computer Science Engineering student at 
           Lokmanya Tilak College of Engineering, Navi Mumbai. I have a deep passion 
-          for software development and design, and I'm always eager to learn new technologies.<br/><br/>
-          When I'm not coding, you can find me exploring new tech trends, participating in hackathons,
-          or collaborating with peers on exciting tech initiatives. I'm always eager to connect with 
+          for software development and design, and I&apos;m always eager to learn new technologies.<br/><br/>
+          When I&apos;m not coding, you can find me exploring new tech trends, participating in hackathons,
+          or collaborating with peers on exciting tech initiatives. I&apos;m always eager to connect with 
           like-minded individuals and explore opportunities that challenge me and help me grow as a developer.
           </div>
 
