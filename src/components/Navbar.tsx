@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 function Navbar() {
   return (
-    <div className='w-screen py-4 px-10 flex justify-between md:space-x-40 items-center bg-black/85 fixed z-50 top-0'>
+    <div className='w-screen py-4 px-10 flex justify-between md:space-x-40 items-center bg-black/85 fixed z-[100] top-0'>
         <div className='w-8 h-8 rounded-full overflow-hidden flex items-center justify-center'>
           <Link href={'/'}>
             <Image src={logo} alt="logo" className='w-8 h-8' />
