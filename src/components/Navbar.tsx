@@ -18,7 +18,6 @@ function Navbar() {
           <div className='flex justify-center items-center space-x-6'>
             <Link href={"/"}><div>About</div></Link>
             <Link href={"/projects"}><div>Projects</div></Link>
-            <Link href={"/exprience"}><div>Experience</div></Link>
             <Link href={"/blog"}><div>Blogs</div></Link>
             <Link href={"/contact"}><div>Contact</div></Link>
           </div>
