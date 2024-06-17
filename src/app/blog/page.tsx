@@ -1,7 +1,7 @@
 import React from 'react';
 import { blogs } from '@/data/blogs';
 import Image from 'next/image';
-import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
+import Link from 'next/link';
 
 function page() {
   return (
@@ -20,26 +20,34 @@ function page() {
       {blogs.map((blog)=>(
         <div
         key={blog.id}
-        className='w-full max-w-[600px] h-fill rounded-md border border-white/50 '
+        className='w-full max-w-[600px] h-fill rounded-md border flex flex-col gap-2 px-3 py-3 border-white/50 '
         >
-          <h1>{blog.title}</h1>
-          <p>{blog.desc}</p>
+          <h1 className='text-4xl font-semibold uppercase'>
+            {blog.title}
+          </h1>
+          <p className='text-md'>
+            {blog.desc.substring(0, 200)}
+            <span className='text-blue-500'>
+              <Link href={"/"}>
+                ...read more
+              </Link>
+            </span>
+          </p>
 
-          <div className='w-full h-1/2 grid grid-cols-2 grid-rows-2'>
+          <div className='w-full gap-1 h-1/2 grid grid-cols-3 grid-rows-2'>
             {
-              <BentoGrid className="w-full h-full relative">
-                {blog.image.map((img)=>(
-                  <BentoGridItem 
-                  id={img.id}
-                  key={img.id}
-                  className={img.id === 0 || img.id === 3 ? "md:col-span-2" : ""}
-                  img={img.link}
-                  >
-
-                  </BentoGridItem>
-                ))}
-              </BentoGrid>
+              blog.image.map((img)=>(
+                <div key={img.id}
+                className={img.id == 2 || img.id == 3? "col-span-1 row-span-1 object-fill": "col-span-2 row-span-2 object-cover"}
+                >
+                  <Image src={img.link} alt={img.link} width={700} height={475} className='w-full h-full'/>
+                </div>
+              ))
             }
+          </div>
+
+          <div className='text-gray-500 font-semibold flex justify-end '>
+            {blog.date}
           </div>
           
         </div>
