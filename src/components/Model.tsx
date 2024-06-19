@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 function Model({isVisible, data, onClose}) {
     if (!isVisible) return null;
-    console.log(data);
     function handelClose(e){
         if (e.target.id === 'wrapper') onClose();
     }

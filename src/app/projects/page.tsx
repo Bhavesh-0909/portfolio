@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
 
-function page() {
+function Page() {
   return (
     <div 
     className='w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-6 px-8 py-5 z-0 mt-14'
@@ -65,4 +65,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

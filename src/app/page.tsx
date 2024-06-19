@@ -5,7 +5,7 @@ import AboutMe from '@/components/AboutMe';
 import Skills from '@/components/Skills';
 
 
-function page() {
+function Page() {
   return (
     <div>
       {/*landing page*/}

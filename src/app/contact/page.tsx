@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6"
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 
-function page() {
+function Page() {
   return (
     <div
     className='w-screen max-h-screen h-auto bg-black mt-10  bg-grid-small-white/[0.1] relative flex items-center justify-center'
@@ -57,4 +57,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

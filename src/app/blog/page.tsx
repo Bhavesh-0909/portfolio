@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Model from '@/components/Model';
 
-function page() {
+function Page() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [data, setData] = useState({id:null, link:null});
@@ -75,4 +75,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
