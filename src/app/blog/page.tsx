@@ -62,7 +62,7 @@ function Page() {
                   alt={img.link} 
                   width={700} 
                   height={475} 
-                  className='w-full h-full'/>
+                  className='w-full h-full cursor-pointer'/>
                 </div>
               ))
             }

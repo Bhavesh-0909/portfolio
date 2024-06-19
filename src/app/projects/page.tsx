@@ -4,6 +4,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
+import { LinkPreview } from '@/components/ui/link-preview';
 
 function Page() {
   return (
@@ -52,8 +53,21 @@ function Page() {
                 ))}</p>
               <p className='text-white/50 '>{project.description}</p>
               <div className='flex gap-2 '>
-                <Link href={project.livelink}><span><FaExternalLinkAlt className='h-5 w-5'/></span></Link>
-                <Link href={project.github}><span><FaGithub className='h-5 w-5'/></span></Link>
+                
+                  <LinkPreview url={project.livelink}>
+                    <span>
+                      <FaExternalLinkAlt className='h-5 w-5'/>
+                    </span>
+                  </LinkPreview>
+                
+
+                
+                  <LinkPreview url={project.github}>
+                    <span>
+                      <FaGithub className='h-5 w-5'/>
+                    </span>
+                  </LinkPreview>
+                
               </div>
             </div>
 

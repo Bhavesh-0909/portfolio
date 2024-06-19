@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-hover-card": "^1.0.7",
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",
     "@tabler/icons-react": "^3.5.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.10",
+    "framer-motion": "^11.2.11",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^14.2.3",
+    "nextjs-toploader": "^1.6.12",
+    "qss": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
