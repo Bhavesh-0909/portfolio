@@ -2,7 +2,14 @@
 import React from 'react'
 import Image from 'next/image';
 
-function Model({isVisible, data, onClose}) {
+interface ModelProps {
+  isVisible: boolean;
+  data: any;
+  onClose: () => void;
+}
+
+
+function Model({isVisible, data, onClose}:ModelProps) {
     if (!isVisible) return null;
     function handelClose(e){
         if (e.target.id === 'wrapper') onClose();
