@@ -5,12 +5,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Model from '@/components/Model';
 
+interface ImgValue{
+  id: number,
+  link: string
+}
+
 function Page() {
 
   const [isVisible, setIsVisible] = useState(false);
-  const [data, setData] = useState({id:null, link:null});
+  const [data, setData] = useState<ImgValue>();
 
-  function handelonclick(img) {
+  function handelonclick(img:ImgValue) {
     setData(img);
     setIsVisible(true);
   }
