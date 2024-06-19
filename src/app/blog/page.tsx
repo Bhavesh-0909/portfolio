@@ -1,12 +1,23 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import { blogs } from '@/data/blogs';
 import Image from 'next/image';
 import Link from 'next/link';
+import Model from '@/components/Model';
 
 function page() {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [data, setData] = useState({id:null, link:null});
+
+  function handelonclick(img) {
+    setData(img);
+    setIsVisible(true);
+  }
+
   return (
     <div className='w-screen min-h-screen h-auto flex flex-col items-center gap-6 px-8 py-5 z-0 mt-14'>
-
+      <Model isVisible={isVisible} data={data} onClose={()=> setIsVisible(false)}/>
       <div
       className='w-full text-5xl text-white/75 font-extrabold'
       >
@@ -40,7 +51,13 @@ function page() {
                 <div key={img.id}
                 className={img.id == 2 || img.id == 3? "col-span-1 row-span-1 object-fill": "col-span-2 row-span-2 object-cover"}
                 >
-                  <Image src={img.link} alt={img.link} width={700} height={475} className='w-full h-full'/>
+                  <Image 
+                  onClick={() => handelonclick(img)}
+                  src={img.link} 
+                  alt={img.link} 
+                  width={700} 
+                  height={475} 
+                  className='w-full h-full'/>
                 </div>
               ))
             }
