@@ -21,7 +21,7 @@ function Model({isVisible, data, onClose}:ModelProps) {
     <div 
     id='wrapper'
     onClick={handleClose}
-    className='w-screen h-screen p-5 fixed inset-0 z-[102] bg-black/25 backdrop-blur-sm flex justify-center items-center'>
+    className='w-screen h-screen overscroll-none p-5 fixed inset-0 z-[102] bg-black/25 backdrop-blur-sm flex justify-center items-center'>
         <div 
         className='md:w-[600px] w-full bg-white'>
             <Image src={data.link} alt={data.link} width={700} height={475}/>
