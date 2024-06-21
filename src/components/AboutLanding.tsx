@@ -48,14 +48,17 @@ function AboutLanding() {
         </div>
 
         <div className='flex w-full justify-center items-center gap-3 mt-4'>
-          <HoverBorderGradient
-          containerClassName="rounded-full"
-          as="button"
-          className="dark:bg-black font-semibold bg-white text-black dark:text-white flex items-center gap-1 py-1 px-3"
-          >
-            Contact
-            <IoIosArrowDropright className="w-6 h-6" />
-          </HoverBorderGradient>
+          <Link href={'/contact'}>
+            <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-black font-semibold bg-white text-black dark:text-white flex items-center gap-1 py-1 px-3"
+            >
+              Contact
+              <IoIosArrowDropright className="w-6 h-6" />
+            </HoverBorderGradient>
+          </Link>
+          
           <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"

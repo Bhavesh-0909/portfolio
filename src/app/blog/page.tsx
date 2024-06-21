@@ -4,6 +4,7 @@ import { blogs } from '@/data/blogs';
 import Image from 'next/image';
 import Link from 'next/link';
 import Model from '@/components/Model';
+import { MenuStore } from '@/state/Menu';
 
 interface ImgValue{
   id: number,
@@ -14,6 +15,7 @@ function Page() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [data, setData] = useState<ImgValue>();
+  const {menu , setMenu} = MenuStore();
 
   function handelonclick(img:ImgValue) {
     setData(img);
@@ -21,7 +23,11 @@ function Page() {
   }
 
   return (
-    <div className='w-screen min-h-screen h-auto flex flex-col items-center gap-6 px-8 py-5 z-0 mt-14'>
+    <div className='relative w-screen min-h-screen h-auto flex flex-col items-center gap-6 px-8 py-5 z-0 mt-14' onClick={()=> setMenu(false)}>
+      <div
+      className={menu ? "bg-black/10 backdrop-blur-sm w-screen h-full absolute inset-0 z-[90] overscroll-none" : "" } 
+      >
+      </div>
       <Model isVisible={isVisible} data={data} onClose={()=> setIsVisible(false)}/>
       <div
       className='w-full text-5xl text-white/75 font-extrabold'

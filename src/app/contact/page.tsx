@@ -1,13 +1,20 @@
+'use client'
+import { MenuStore } from '@/state/Menu';
 import React from 'react'
 import { FaLocationDot } from "react-icons/fa6"
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 
 function Page() {
+  const {menu, setMenu} = MenuStore()
   return (
     <div
     className='w-screen max-h-screen h-auto bg-black mt-10  bg-grid-small-white/[0.1] relative flex items-center justify-center'
+    onClick={()=> setMenu(false)}
     >
+      <div
+      className={menu ? "bg-black/10 backdrop-blur-sm w-screen h-full absolute inset-0 z-[90] overscroll-none" : "" } 
+      ></div>
       <div 
       className='bg-black border border-white/50 rounded-md max-w-[800px] w-full min-h-[80vh] h-full mt-8 flex items-center'
       >

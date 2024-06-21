@@ -26,7 +26,8 @@
     "react-lottie": "^1.2.4",
     "tailwind-merge": "^2.3.0",
     "three": "^0.165.0",
-    "three-globe": "^2.31.0"
+    "three-globe": "^2.31.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",

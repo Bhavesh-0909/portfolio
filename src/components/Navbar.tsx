@@ -6,13 +6,14 @@ import { IoMdMenu } from "react-icons/io";
 import logo from "../assets/bc.png";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { MenuStore } from '@/state/Menu';
 
 function Navbar() {
   const pathname = usePathname();
-  const [menu, setMenu] = useState<boolean>(false);
-
+  const {menu, setMenu} = MenuStore();
+  
   return (
-    <div className='w-screen h-fit py-4 px-10 flex items-center justify-center bg-[#0E0E10]/85 fixed z-[100] top-0'>
+    <div id="Navbar" className='w-screen h-fit py-4 px-10 flex items-center justify-center bg-[#0E0E10]/85 fixed z-[100] top-0'>
       
       <div className='max-w-[1080px] mx-auto w-full flex justify-between items-center'>
         

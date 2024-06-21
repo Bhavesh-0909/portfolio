@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {projects} from "@/data/projects";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -5,12 +6,19 @@ import { FaGithub } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
 import { LinkPreview } from '@/components/ui/link-preview';
+import { MenuStore } from '@/state/Menu';
 
 function Page() {
+  const {menu, setMenu} = MenuStore();
   return (
     <div 
-    className='w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-6 px-8 py-5 z-0 mt-14'
+    className='relative w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-6 px-8 py-5 z-0 mt-14'
+    onClick={()=> setMenu(false)}
     >
+      <div
+      className={menu ? "bg-black/10 backdrop-blur-sm w-screen h-full absolute inset-0 z-[90] overscroll-none" : "" } 
+      >
+      </div>
       <div
       className='w-full text-5xl text-white/75 font-extrabold'
       >
