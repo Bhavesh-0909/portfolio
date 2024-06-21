@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React from 'react'
 import { MdDarkMode } from "react-icons/md";
 import { IoMdMenu } from "react-icons/io";
 import logo from "../assets/bc.png";
