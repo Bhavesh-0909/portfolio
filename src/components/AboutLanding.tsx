@@ -59,7 +59,7 @@ function AboutLanding() {
           <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"
-          className="dark:bg-blue-400 font-semibold bg-blue-400 text-white dark:text-white flex items-center gap-1 py-1 px-3"
+          className="dark:bg-white font-semibold bg-blue-400 text-black dark:text-black flex items-center gap-1 py-1 px-3"
           >
             Resume
             <IoMdDownload className="w-6 h-6 text-black" />

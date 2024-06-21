@@ -24,7 +24,7 @@ function Page() {
       {
         projects.map((project)=>(
           <div key={project.id}
-          className='w-full h-[80vh] px-6 py-5 rounded-lg border border-white/85 flex flex-wrap items-center justify-between gap-6 '
+          className='w-full min-h-[80vh] px-6 py-5 rounded-lg border border-white/85 flex flex-wrap items-center justify-between gap-6 '
           >
             
             <div 
