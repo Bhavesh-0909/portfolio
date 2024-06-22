@@ -29,20 +29,20 @@ function AboutLanding() {
         </div>
 
         <div className='flex items-center justify-center gap-4 mx-auto'>
-        <Link href={"/"}>
+        <Link rel="noopener noreferrer" target="_blank" href={"https://www.instagram.com/_bhavesh_7?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}>
           <FaInstagram className='w-4 h-4 text-red-500 cursor-pointer'/>
         </Link>
 
-        <Link href={"/"}>
+        <Link rel="noopener noreferrer" target="_blank" href={"https://x.com/Bhavesh_Dev07"}>
           <FaXTwitter className='w-4 h-4 text-white cursor-pointer'/>
         </Link>
 
-        <Link href={"/"}>
+        <Link rel="noopener noreferrer" target="_blank" href={"https://github.com/Bhavesh-0909"}>
           <FaGithub className='w-4 h-4 text-white cursor-pointer'/>
         </Link>
 
-        <Link href={"/about"}>
-          <FaLinkedin className='w-4 h-4 text-blue-500 cursor-crosshair'/>
+        <Link href={"https://www.linkedin.com/in/bhavesh-choudhary-700617285/"}>
+          <FaLinkedin className='w-4 h-4 text-blue-500 cursor-pointer'/>
         </Link>
 
         </div>
@@ -59,14 +59,17 @@ function AboutLanding() {
             </HoverBorderGradient>
           </Link>
           
-          <HoverBorderGradient
-          containerClassName="rounded-full"
-          as="button"
-          className="dark:bg-white font-semibold bg-blue-400 text-black dark:text-black flex items-center gap-1 py-1 px-3"
-          >
-            Resume
-            <IoMdDownload className="w-6 h-6 text-black" />
-          </HoverBorderGradient>
+          <Link rel="noopener noreferrer" target="_blank" href={"https://docs.google.com/document/d/16Mmkfr2xh2wEiR3e1ctAYdJv6gsEReCk_WdLvwGdqPU/edit?usp=sharing"}>
+            <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-white font-semibold bg-blue-400 text-black dark:text-black flex items-center gap-1 py-1 px-3"
+            >
+              Resume
+              <IoMdDownload className="w-6 h-6 text-black" />
+            </HoverBorderGradient>
+          </Link>
+          
         </div>
       </div>
 
