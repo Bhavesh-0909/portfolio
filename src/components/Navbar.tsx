@@ -3,7 +3,6 @@ import Image from 'next/image'
 import React from 'react'
 import { MdDarkMode } from "react-icons/md";
 import { IoMdMenu } from "react-icons/io";
-import logo from "../assets/bc.png";
 import { usePathname } from 'next/navigation';
 import { MenuStore } from '@/state/Menu';
 import Link from 'next/link';
@@ -27,10 +26,11 @@ function Navbar() {
                 (<button onClick={() => setMenu(!menu)} className='h-full w-full font-bold text-lg'>X</button>) : 
                 (<button onClick={() => setMenu(!menu)}><IoMdMenu className='w-6 h-6 text-white'/></button>)}
           </div>
-
-          <button onClick={()=>handleNav()}>
-            <Image src={logo} alt="logo" className='w-10 h-10 rounded-full relative z-[100]' />
-          </button>
+          <Link href={'/'}>
+            <button onClick={()=>handleNav()}>
+              <Image src='/bc.png' width={100} height={100} alt="logo" className='w-10 h-10 rounded-full relative z-[100]' />
+            </button>
+          </Link>
         </div>
         
         <div 
