@@ -4,13 +4,17 @@ import React from 'react'
 import { MdDarkMode } from "react-icons/md";
 import { IoMdMenu } from "react-icons/io";
 import logo from "../assets/bc.png";
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { MenuStore } from '@/state/Menu';
+import Link from 'next/link';
 
 function Navbar() {
   const pathname = usePathname();
   const {menu, setMenu} = MenuStore();
+
+  const handleNav = () => {
+    setMenu(false);
+  }
   
   return (
     <div id="Navbar" className='w-screen h-fit py-4 px-10 flex items-center justify-center bg-[#0E0E10]/85 fixed z-[100] top-0'>
@@ -24,9 +28,9 @@ function Navbar() {
                 (<button onClick={() => setMenu(!menu)}><IoMdMenu className='w-6 h-6 text-white'/></button>)}
           </div>
 
-          <Link href={'/'}>
+          <button onClick={()=>handleNav()}>
             <Image src={logo} alt="logo" className='w-10 h-10 rounded-full relative z-[100]' />
-          </Link>
+          </button>
         </div>
         
         <div 
@@ -35,29 +39,38 @@ function Navbar() {
          transition-transform duration-500 ease-in-out
                         ${menu ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
           
-          <Link href={"/"} passHref>
+          <Link href={'/'}>
             <div className={`px-2 py-1 text-center rounded-md md:w-full w-[60%] mx-auto ${pathname === '/' ? 'bg-gray-900/95 text-white' : 'text-gray-300 hover:bg-gray-700/80 hover:text-white'}`}>
-              About
+              <button onClick={()=>handleNav()}>
+                About
+              </button>
             </div>
           </Link>
-
-          <Link href={"/projects"} passHref>
+          
+          <Link href={'/projects'}>
             <div className={`px-2 py-1 text-center rounded-md md:w-full w-[60%] mx-auto ${pathname === '/projects' ? 'bg-gray-900/95 text-white' : 'text-gray-300 hover:bg-gray-700/80 hover:text-white'}`}>
-              Projects
+              <button onClick={()=>handleNav()}>
+                Projects
+              </button>
             </div>
           </Link>
 
-          <Link href={"/blog"} passHref>
+          <Link href={'/blog'}>
             <div className={`px-2 py-1 text-center rounded-md md:w-full w-[60%] mx-auto ${pathname === '/blog' ? 'bg-gray-900/95 text-white' : 'text-gray-300 hover:bg-gray-700/80 hover:text-white'}`}>
-              Blogs
+              <button onClick={()=>handleNav()}>
+                Blogs
+              </button>
             </div>
           </Link>
 
-          <Link href={"/contact"} passHref>
+          <Link href={'/contact'}>
             <div className={`px-2 py-1 text-center rounded-md md:w-full w-[60%] mx-auto ${pathname === '/contact' ? 'bg-gray-900/95 text-white' : 'text-gray-300 hover:bg-gray-700/80 hover:text-white'}`}>
-              Contact
+              <button onClick={()=>handleNav()}>
+                Contact
+              </button>
             </div>
           </Link>
+
         </div>
           
         <div>
