@@ -21,6 +21,7 @@ export default function RootLayout({
       <head>
       <link rel="icon" href="/bc.png" type="image/png" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="google-site-verification" content="Wdn4rfd9N766rJ45I77_04HWKZmuEJRsDclI1xgJu3E" />
       </head>
       <body className={inter.className}>
         <NextTopLoader
