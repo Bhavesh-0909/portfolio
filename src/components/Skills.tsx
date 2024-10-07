@@ -26,6 +26,7 @@ function Skills() {
                     width={100} 
                     height={100} 
                     className={`w-full h-full  ${skill?.className}`} 
+                    loading='lazy'
                 />
 
             </div>

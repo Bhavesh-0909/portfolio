@@ -45,6 +45,7 @@ function Page() {
               width="700"
               height="475"
               className='w-full h-full '
+              loading='lazy'
               />
               </Link>
               

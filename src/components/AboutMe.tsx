@@ -23,7 +23,7 @@ function AboutMe() {
             <div className='absolute -inset-0.5 w-[250px] h-[250px] animate-spin transition-all duration-[5s] rounded-full opacity-75 bg-gradient-to-r from-red-600 to-purple-900 flex items-center justify-center' style={{ filter: 'blur(15px)' }}>
             </div>
             <div className='relative p-1 rounded-full object-cover overflow-hidden'>
-              <Image src={profile} alt='profile' width={250} height={250} className='rounded-full'/>
+              <Image src={profile} alt='profile' width={250} height={250} className="rounded-full" loading="lazy"/>
             </div>
           </div>
         </div>

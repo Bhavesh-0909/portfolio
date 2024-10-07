@@ -16,13 +16,12 @@ function AboutLanding() {
 
       <div className='flex flex-col gap-2'>
 
-        <div className='font-bold text-6xl text-center text-white/90 tracking- ' >
-        Hi, I&apos;m Bhavesh
-        </div>
-
-        <div className='font-bold -mt-3 text-lg text-center text-red-500/70 ' >
-        Full Stack Developer
-        </div>
+      <div className='font-bold text-6xl text-center text-white/90 tracking- '>
+        <h1>Hi, I&apos;m Bhavesh</h1>
+      </div>
+      <div className='font-bold -mt-3 text-lg text-center text-red-500/70'>
+        <h2>Full Stack Developer</h2>
+      </div>
 
         <div className='w-3/4 mx-auto font-bold text-sm text-center text-white/50 '>
           I am a software engineer who builds for the web with a design-oriented approach.

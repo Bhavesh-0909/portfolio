@@ -28,7 +28,7 @@ function Navbar() {
           </div>
           <Link href={'/'}>
             <button onClick={()=>handleNav()}>
-              <Image src='/bc.png' width={100} height={100} alt="logo" className='w-10 h-10 rounded-full relative z-[100]' />
+              <Image src='/bc.png' width={100} height={100} alt="logo" className='w-10 h-10 rounded-full relative z-[100]' loading='lazy' />
             </button>
           </Link>
         </div>

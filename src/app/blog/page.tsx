@@ -68,6 +68,7 @@ function Page() {
                   alt={img.link} 
                   width={700} 
                   height={475} 
+                  loading='lazy'
                   className='w-full h-full cursor-pointer'/>
                 </div>
               ))
